@@ -28,3 +28,9 @@ flowchart TD
     class NextApp primary;
     class MDX,Assets storage;
 ```
+
+## Deployment Strategy
+
+The project utilizes a **multi-stage Docker build process**, leveraging Next.js's "standalone" output mode. This mode automatically traces all required dependencies and copies them into a minimal production artifact, keeping the final Docker image incredibly small and efficient.
+
+A simple `docker-compose.yml` file is provided for isolated, production-like local development and testing. This approach forms the foundation for later automated CI/CD pipeline deployments using GitHub Actions.

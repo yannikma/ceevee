@@ -16,5 +16,25 @@ This project goes beyond a simple static page—it actively visualizes professio
 - Responsive, modern design
 - Automated deployment and testing (CI/CD)
 
+## 🛠 Quick Start
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-link>
+   cd ceevee
+   ```
+2. **Run locally with Docker:**
+   Ensure Docker is running on your machine, then execute:
+   ```bash
+   docker-compose up --build -d
+   ```
+   The application will be accessible at `http://localhost:3000`.
+
+3. **Run locally with npm (without Docker):**
+   ```bash
+   npm install
+   npm run dev
+   ```
+
 ---
 *This README will be updated as the project's technical specifications and features are defined.*
