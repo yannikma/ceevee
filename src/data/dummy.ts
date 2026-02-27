@@ -1,6 +1,8 @@
-export const cvData = {
+import { CVData } from "@/types";
+
+export const cvData: CVData = {
   personal: {
-    name: "John Doe",
+    name: "Yannik Mayer",
     role: "Software Engineer & DevOps Specialist",
     bio: "Passionate about building scalable web applications and robust infrastructure. With over 8 years of experience in full-stack development and cloud engineering, I bridge the gap between development and operations to deliver seamless digital experiences.",
     email: "john@example.com",

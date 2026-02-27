@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { cvData } from "@/data/dummy";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Badge } from "@/components/ui/Badge";
 
 export default function Experience() {
     return (
@@ -12,9 +14,7 @@ export default function Experience() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
-                <h2 className="text-3xl font-bold text-white mb-10 flex items-center">
-                    <span className="text-emerald-400 mr-3">01.</span> Experience
-                </h2>
+                <SectionHeader number="01" title="Experience" />
 
                 <div className="space-y-12">
                     {cvData.experience.map((job, index) => (
@@ -48,12 +48,7 @@ export default function Experience() {
 
                                     <div className="flex flex-wrap gap-2">
                                         {job.skills.map(skill => (
-                                            <span
-                                                key={skill}
-                                                className="px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-400/10 rounded-full"
-                                            >
-                                                {skill}
-                                            </span>
+                                            <Badge key={skill} variant="subtle">{skill}</Badge>
                                         ))}
                                     </div>
                                 </div>

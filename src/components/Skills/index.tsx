@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { cvData } from "@/data/dummy";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Badge } from "@/components/ui/Badge";
 
 export default function Skills() {
     return (
@@ -12,9 +14,7 @@ export default function Skills() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
-                <h2 className="text-3xl font-bold text-white mb-10 flex items-center">
-                    <span className="text-emerald-400 mr-3">02.</span> Skills & Expertise
-                </h2>
+                <SectionHeader number="02" title="Skills & Expertise" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {cvData.skills.map((skillGroup, index) => (
@@ -32,12 +32,7 @@ export default function Skills() {
 
                             <div className="flex flex-wrap gap-2">
                                 {skillGroup.items.map(skill => (
-                                    <span
-                                        key={skill}
-                                        className="px-3 py-1.5 text-sm font-medium text-neutral-300 bg-neutral-800 rounded-md shadow-sm border border-neutral-700/50"
-                                    >
-                                        {skill}
-                                    </span>
+                                    <Badge key={skill} variant="solid">{skill}</Badge>
                                 ))}
                             </div>
                         </motion.div>
