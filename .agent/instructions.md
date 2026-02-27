@@ -12,3 +12,12 @@ For the DevOps foundation, use Docker and GitHub Actions. A detailed ADR can be 
 
 # Project Architecture
 The project architecture is documented in the [docs/architecture](docs/architecture) directory. Always refer to the architecture documentation when making changes to the project structure or code.
+
+## System Overview
+The system overview is documented [here](docs/architecture/01_system_overview.md).
+
+## Frontend Architecture
+The frontend architecture is documented [here](docs/architecture/02_frontend_architecture.md).
+
+## Deployment Architecture
+The deployment architecture is documented [here](docs/architecture/03_deployment_architecture.md).
