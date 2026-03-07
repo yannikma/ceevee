@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ceevee-ingress
+  namespace: ceevee
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    # To enable HTTPS, you will need cert-manager and to uncomment the lines below
+    # cert-manager.io/cluster-issuer: "letsencrypt-prod" 
+spec:
+  rules:
+    # TODO: Replace with your actual domain name
+    - host: your-domain.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ceevee-service
+                port:
+                  number: 80
+  # Uncomment this block after installing cert-manager and setting up the cluster-issuer
+  # tls:
+  #  - hosts:
+  #      - your-domain.com
+  #    secretName: ceevee-tls
